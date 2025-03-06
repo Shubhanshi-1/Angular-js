@@ -6,9 +6,18 @@ import { RouterOutlet } from '@angular/router';
   imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
+
+  
 })
+
 export class AppComponent {
  // title = 'Helloworld';
  message: string = "Hello from BridgeLabz"; 
   imgUrl: string = "../assets/BL_logo_square_jpg.jpg"; 
+
+  launchBridgeLabz() {
+    window.open('https://www.bridgelabz.com', '_blank');
+  }
 }
+
+
