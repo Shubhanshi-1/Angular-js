@@ -1,23 +1,19 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { FormsModule } from '@angular/forms'; 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
-
-  
+  styleUrls: ['./app.component.scss'],
+  standalone: true,
+  imports: [FormsModule]
 })
-
 export class AppComponent {
- // title = 'Helloworld';
- message: string = "Hello from BridgeLabz"; 
-  imgUrl: string = "../assets/BL_logo_square_jpg.jpg"; 
+  message: string = "Hello from BridgeLabz";  
+  logoPath: string = "assets/BL_logo_square_jpg.jpg";
+  userName: string = "";
 
-  launchBridgeLabz() {
-    window.open('https://www.bridgelabz.com', '_blank');
+  openBridgeLabz() {
+    window.open("https://www.bridgelabz.com", "_blank");
   }
 }
-
-
